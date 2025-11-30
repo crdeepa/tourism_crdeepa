@@ -35,21 +35,27 @@ Designation=st.selectbox("Designation", ["Executive","Manager","Senior Manager",
 
 # Assemble input into DataFrame
 input_data = pd.DataFrame([{
-    'app_category': app_category,
-    'free_or_paid': free_or_paid,
-    'content_rating': content_rating,
-    'screentime_category': screentime_category,
-    'app_size_in_mb': app_size,
-    'price_in_usd': price,
-    'number_of_installs': installs,
-    'average_screen_time': screen_time,
-    'active_users': active_users,
-    'no_of_short_ads_per_hour': short_ads,
-    'no_of_long_ads_per_hour': long_ads
+    'Age': Age,
+    'CityTier': CityTier,
+    'DurationOfPitch': DurationOfPitch,
+    'NumberOfPersonVisiting': NumberOfPersonVisiting,
+    'NumberOfFollowups': NumberOfFollowups,
+    'PreferredPropertyStar': PreferredPropertyStar,
+    'NumberOfTrips': NumberOfTrips,
+    'Passport': Passport,
+    'PitchSatisfactionScore': PitchSatisfactionScore,
+    'OwnCar': OwnCar,
+    'NumberOfChildrenVisiting': NumberOfChildrenVisiting,
+    'MonthlyIncome':MonthlyIncome,
+    'TypeofContact':TypeofContact,
+    'Occupation':Occupation,
+    'Gender':Gender,
+    'ProductPitched':ProductPitched,
+    'MaritalStatus':MaritalStatus,
+    'Designation':Designation
 }])
 
 # Predict button
-if st.button("Predict Revenue"):
+if st.button("Predict"):
     prediction = model.predict(input_data)[0]
-    st.subheader("Prediction Result:")
-    st.success(f"Estimated Ad Revenue: **${prediction:,.2f} USD**")
+    st.write(f"Prediction: {prediction}")    
