@@ -4,7 +4,7 @@ from huggingface_hub import hf_hub_download
 import joblib
 
 # Download and load the trained model
-model_path = hf_hub_download(repo_id="crdeepa/tourism-package-prediction/tourism_package_model", filename="best_tourism_package_model_v1.joblib")
+model_path = hf_hub_download(repo_id="crdeepa/tourism_package_model", filename="best_tourism_package_model_v1.joblib")
 model = joblib.load(model_path)
 
 # Streamlit UI
