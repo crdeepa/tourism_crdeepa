@@ -26,7 +26,7 @@ OwnCar=st.number_input("OwnCar", min_value=0, max_value=1, value=0, step=1)
 NumberOfChildrenVisiting=st.number_input("NumberOfChildrenVisiting", min_value=0, max_value=10, value=1, step=1)
 MonthlyIncome=st.number_input("MonthlyIncome", min_value=1000, max_value=100000, value=50000, step=1)
 
-TypeofContact=st.selectbox("TypeofContact", ["Company Invited Other","Company Invited"])
+TypeofContact=st.selectbox("TypeofContact", ["Company Invited","Self Enquiry"])
 Occupation=st.selectbox("Occupation", ["Salaried","Free Lancer","Small Business","Large Business"])
 Gender=st.selectbox("Gender", ["Male","Female"])
 ProductPitched=st.selectbox("ProductPitched", ["Deluxe","Basic","Standard","Super Deluxe","King"])
