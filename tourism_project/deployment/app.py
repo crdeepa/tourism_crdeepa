@@ -57,5 +57,6 @@ input_data = pd.DataFrame([{
 
 # Predict button
 if st.button("Predict"):
-    prediction = model.predict(input_data)[0]
+    prediction_value = model.predict(input_data)[0]
+    prediction="Will Purchase" if prediction_value>0.6 else "Will NOT Purchase"
     st.write(f"Prediction: {prediction}")    
